@@ -1,0 +1,47 @@
+<ion-content>
+  <div class="mainContent">
+    <ion-slides mode="ios" pager>
+      <ion-slide *ngFor="let item of imgs">
+        <div [style.backgroundImage]="'url('+item+')'" class="imgBg">
+        </div>
+      </ion-slide>
+    </ion-slides>
+    <div class="bgView" (click)="superLike()">
+      <img src="assets/download.png" alt="" class="bgDown">
+    </div>
+    <div class="info">
+      <h2>Super Giggles , 22</h2>
+      <ion-label>
+        <ion-icon name="school-outline"></ion-icon> Gujarat Technological Univercity
+      </ion-label>
+      <ion-label>
+        <ion-icon name="home-outline"></ion-icon> Palitana Bhavnagar
+      </ion-label>
+      <ion-label>
+        <ion-icon name="school-outline"></ion-icon>4 miles away
+      </ion-label>
+    </div>
+    <div class="info">
+      <h2>Instagram Photos</h2>
+      <ion-row>
+        <ion-col size="4" *ngFor="let item of imgs">
+          <div [style.backgroundImage]="'url('+item+')'" class="imgBgInsta">
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="tinderButtons">
+
+      <div class="btnBgMain" (click)="userClickedButton($event, false)">
+        <img class="btnImage" src="assets/dislike.png" alt="">
+      </div>
+      <div class="btnBg" (click)="superLike()">
+        <img class="btnImage" src="assets/superlike.png" alt="">
+      </div>
+      <div class="btnBgMain" (click)="userClickedButton($event, true)">
+        <img class="btnImage" src="assets/like.png" alt="">
+      </div>
+
+    </div>
+  </div>
+</ion-content>

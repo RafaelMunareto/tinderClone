@@ -1,0 +1,64 @@
+<div class="tinder" [hidden]="!cards.length">
+
+  <div class="tinderStatus">
+
+    <div [style.opacity]="crossVisible? '1':'0'">
+      <div class="nope">
+        NOPE
+      </div>
+    </div>
+
+    <div [style.opacity]="heartVisible? '1':'0'">
+
+      <div class="liked">
+        LIKE
+      </div>
+    </div>
+    <div [style.opacity]="haveSuperLike? '1':'0'">
+
+      <div class="superLiked">
+        SUPER LIKE
+      </div>
+    </div>
+  </div>
+
+  <div class="tinderCards" (pan)="handlePan($event)" (panend)="handlePanEnd($event)">
+    <div #tinderCard class="tinderCard" (transitionend)="handleShift()" *ngFor="let card of cards; let i = index"
+      [ngStyle]="{ zIndex: cards.length - i, transform: 'scale(' + (20 - i) / 20 + ') translateY(-' + 20 * i + 'px)' }">
+      <div [style.backgroundImage]="'url('+card.img+')'" class="userImage">
+        <div userInfo (click)="openInfo(card)">
+          <ion-label class="name">
+            {{card.name}}
+            <ion-icon color="light" name="information-circle"></ion-icon>
+          </ion-label>
+          <ion-label class="subTitle">
+            {{card.description}}
+          </ion-label>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tinderButtons">
+    <div class="btnBg" (click)="openPurchase()">
+      <img class="btnImage" src="assets/refresh.png" alt="">
+    </div>
+    <div class="btnBgMain" (click)="userClickedButton($event, false)">
+      <img class="btnImage" src="assets/dislike.png" alt="">
+    </div>
+    <div class="btnBg" (click)="superLike()">
+      <img class="btnImage" src="assets/superlike.png" alt="">
+    </div>
+    <div class="btnBgMain" (click)="userClickedButton($event, true)">
+      <img class="btnImage" src="assets/like.png" alt="">
+    </div>
+    <div class="btnBg" (click)="openPurchase()">
+      <img class="btnImage" src="assets/boost.png" alt="">
+    </div>
+
+
+  </div>
+
+</div>

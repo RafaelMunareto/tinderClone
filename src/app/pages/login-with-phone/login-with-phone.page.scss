@@ -1,0 +1,39 @@
+.mainDiv{
+    h2{
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bold;
+    }
+    .contry{
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+        border-bottom: 1px solid lightgray;
+        .cc{
+            padding-bottom:10px;
+            margin: 0px;
+        }
+    }
+    .inputItem{
+        border-bottom: 1px solid lightgray;
+    }
+    .flexDiv{
+        display: flex;
+        flex-direction: row;
+        font-size: .8rem;
+        justify-content: space-around;
+        .changed{
+            color: gray;
+        }
+        .colored{
+            color:var(--ion-color-primary);
+        }
+    }
+    .textInfo{
+        color: gray;
+        font-size: .8rem;
+    }
+    .btn{
+        margin-top: 20px;
+    }
+}

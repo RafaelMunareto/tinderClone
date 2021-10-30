@@ -1,0 +1,54 @@
+<div class="mainMenu">
+  <div class="navigations">
+    <ion-row>
+      <ion-col size="6" style="border-right: 1px solid lightgray;">
+        <ion-label (click)="changeView('likes')" class="title">1 like</ion-label>
+      </ion-col>
+      <ion-col size="6">
+        <ion-label (click)="changeView('picks')" class="title">10 Top Picks</ion-label>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="likeSections" *ngIf="viewMenu == 'likes'">
+    <ion-label class="title">Upgrade to Gold to see</ion-label>
+    <ion-label class="title">people who have already</ion-label>
+    <ion-label class="title">liked you.</ion-label>
+    <div style="height: 20px;"></div>
+    <ion-row class="ion-no-margin ion-no-padding">
+      <ion-col *ngFor="let item of likedMe" size="6">
+        <div [style.backgroundImage]="'url('+item.img+')'" class="userPic">
+        </div>
+      </ion-col>
+    </ion-row>
+    <div class="seeLikes">
+      <ion-button (click)="onSee()" color="warning" expand="full" shape="round">
+        SEE WHO LIKES YOU
+      </ion-button>
+    </div>
+  </div>
+  <div class="pickSections" *ngIf="viewMenu == 'picks'">
+    <ion-label class="title">Upgrade to Tinder Gold for</ion-label>
+    <ion-label class="title">more Top Picks!</ion-label>
+    <div style="height: 20px;"></div>
+    <ion-row class="ion-no-margin ion-no-padding">
+      <ion-col *ngFor="let item of topPicks;let i = index" size="6">
+        <div [style.backgroundImage]="'url('+item.img+')'" [className]="i < 4 ? 'userPic':'userPicBlur'">
+          <div class="info" *ngIf="i < 4">
+            <div class="infoSections">
+              <ion-label>{{item.name}}</ion-label>
+              <ion-label>{{item.description}}</ion-label>
+            </div>
+            <div class="iconSection">
+              <img class="btnImage" src="assets/superlike.png" alt="">
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <div class="seeLikes">
+      <ion-button (click)="unlock()" color="warning" expand="full" shape="round">
+        UNLOCK TOP PICKS
+      </ion-button>
+    </div>
+  </div>
+</div>

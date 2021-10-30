@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" mode="md">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="mainDiv">
+    <h2>My code is</h2>
+    <div class="otp">
+      <ng-otp-input (onInputChange)="onOtpChange($event)"
+        [config]="{length:4,inputStyles:{'width': '60px','height': '60px','border':'0px', 'border-bottom':'1px solid gray'}}">
+      </ng-otp-input>
+    </div>
+    <p class="resend">RESEND CODE</p>
+    <div class="btn">
+      <ion-button (click)="onLogin()" expand="block" shape="round">
+        CONTINUE
+      </ion-button>
+    </div>
+  </div>
+
+</ion-content>

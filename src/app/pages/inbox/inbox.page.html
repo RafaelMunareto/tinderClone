@@ -1,0 +1,53 @@
+<ion-header>
+  <div class="header_div">
+    <div class="first_div">
+      <ion-buttons slot="start">
+        <ion-back-button mode="md" color="light"></ion-back-button>
+      </ion-buttons>
+      <div class="back_image" [style.backgroundImage]="'url(assets/images/5.png)'"></div>
+      <ion-label>Super Giggles</ion-label>
+    </div>
+    <div>
+      <ion-button fill="clear" size="small">
+        <ion-icon slot="icon-only" name="call"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" size="small">
+        <ion-icon slot="icon-only" name="videocam"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <span *ngFor="let item of msgs">
+      <div class="left_div" *ngIf="item.side == 'left'">
+        <div class="inner_div">
+          <div class="back_image" [style.backgroundImage]="'url(assets/images/5.png)'"></div>
+          <div class="msg_div">
+            <ion-label>{{item.msg}}</ion-label>
+          </div>
+        </div>
+      </div>
+
+      <div class="right_div" *ngIf="item.side == 'right'">
+        <div class="inner_div">
+          <div class="msg_div">
+            <ion-label>{{item.msg}}</ion-label>
+          </div>
+          <div class="back_image" [style.backgroundImage]="'url(assets/images/9.png)'"></div>
+        </div>
+      </div>
+    </span>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="footer_div">
+    <ion-input type="text" placeholder="Type Here..">
+      <ion-icon name="navigate-circle" slot="end"></ion-icon>
+    </ion-input>
+  </div>
+</ion-footer>

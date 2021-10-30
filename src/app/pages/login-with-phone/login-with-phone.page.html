@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" mode="md">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="mainDiv">
+    <h2>My number is</h2>
+    <ion-row>
+      <ion-col size="4">
+        <div class="contry">
+          <p class="cc"> IN +91 <ion-icon name="caret-down-outline"></ion-icon>
+          </p>
+        </div>
+      </ion-col>
+      <ion-col size="8">
+        <div class="inputItem">
+          <ion-input type="number" placeholder="Phone number"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+    <div class="flexDiv">
+      <p class="changed">Changed your phone number ?</p>
+      <p class="colored">LOG IN BY EMAIL</p>
+    </div>
+    <p class="textInfo">When you tag 'continue'. Tinder will send a text with <br>
+      verification code. Message and data rates may apply <br> The verified phone number can be used to log in <br>
+      <span style="font-weight: bold;text-decoration: underline;">Learn what happens when your number changes</span></p>
+    <div class="btn">
+      <ion-button (click)="onLogin()" expand="block" shape="round">
+        CONTINUE
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

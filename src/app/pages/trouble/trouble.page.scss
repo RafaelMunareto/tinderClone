@@ -1,0 +1,17 @@
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        font-weight: bold;
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+    .email{
+        width: 100%;
+        margin-top: 20px;
+    }
+}

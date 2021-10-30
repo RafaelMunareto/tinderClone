@@ -1,0 +1,71 @@
+ion-content{
+    --background: none;
+    background-image: linear-gradient(141deg, #ff8e009e 0%, var(--ion-color-primary) 51%, var(--ion-color-danger) 75%);
+    background-size: cover;
+}
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .logo{
+        width: 250px;
+        margin-top: 50%;
+    }
+    .terms{
+        text-align: center;
+        color: white;
+        font-size: 1rem;
+        margin-top: 30%;
+    }
+    .fb{
+        width: 100%;
+        padding:10px 20px;
+        ion-button {
+            --background: linear-gradient(120deg, #3b5998, blue );
+            --background-activated: linear-gradient(120deg, #3b5998, blue);
+            --background-activated-opacity: 1;
+            --background-focused: linear-gradient(120deg, #3b5998, blue);
+            --background-focused-opacity: 1;
+            --background-hover: linear-gradient(120deg, #3b5998, blue);
+            --background-hover-opacity: 1;
+            --color: #ffffff;
+            --color-activated: #ffffff;
+            --color-focused: #ffffff;
+            --color-hover: #ffffff;
+            --opacity: 1;
+            --padding-bottom: 4px;
+            --padding-end: 4px;
+            --padding-start: 4px;
+            --padding-top: 4px;
+            --ripple-color: #1e1e1e;
+            --transition: background-color 15ms linear;
+        }
+    }
+    .phone{
+        width: 100%;
+        padding:10px 20px;
+        ion-button {
+            --background: transparent;
+            --background-activated: transparent;
+            --background-activated-opacity: 1;
+            --background-focused: transparent;
+            --background-focused-opacity: 1;
+            --background-hover: #3880ff;
+            --background-hover-opacity: 1;
+            --color: #ffffff;
+            border: 1px solid white;
+            border-radius: 30px;
+            --color-activated: #ffffff;
+            --color-focused: #ffffff;
+            --color-hover: #ffffff;
+        
+        }
+    }
+    .troub{
+        color: white;
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 1rem;
+    }   
+}

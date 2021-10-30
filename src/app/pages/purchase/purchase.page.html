@@ -1,0 +1,53 @@
+<div class="inner-content">
+  <div class="div_content">
+    <p class="title">GET TINDER GOLD</p>
+    <ion-slides pager [options]="slideOpts">
+      <ion-slide *ngFor="let item of sliders;">
+        <div class="sliders">
+          <div class="bg">
+            <img [src]="item.img" alt="" class="iconImg">
+          </div>
+          <p class="title"> {{item.title}}</p>
+          <p class="subTitle">{{item.subTitle}}</p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+    <ion-row class="ion-no-padding ion-no-margin">
+      <ion-col size="4" class="active" (click)="plan ='12'">
+        <div class="bordered" *ngIf="plan=='12'"></div>
+        <div class="pricing">
+          <p>12</p>
+          <p>months</p>
+          <p>$20/mo</p>
+        </div>
+      </ion-col>
+      <ion-col size="4" class="active" (click)="plan ='6'">
+        <div class="bordered" *ngIf="plan=='6'"></div>
+        <div class="pricing">
+          <p>6</p>
+          <p>months</p>
+          <p>$25/mo</p>
+        </div>
+      </ion-col>
+      <ion-col size="4" class="active" (click)="plan ='1'">
+        <div class="bordered" *ngIf="plan=='1'"></div>
+        <div class="pricing">
+          <p>1</p>
+          <p>month</p>
+          <p>$50/mo</p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <div class="bottomBtn">
+      <ion-button (click)="pay()" expand="block" shape="round">
+        CONTINUE
+      </ion-button>
+    </div>
+    <p class="head">Recurring billing, cancel anytime.</p>
+    <p class="warning">By tapping 'Continue', your payment will be charged to your Google Play account. and your
+      subscription will
+      automatically renew for the same package length at the same price until you cancel in settings in the google play
+      store, by tapping 'contiue'. you agree to our terms</p>
+  </div>
+
+</div>

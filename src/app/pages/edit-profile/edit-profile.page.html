@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" mode="md">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="padder">
+    <ion-row>
+      <ion-col size="4" *ngFor="let item of myprofile;let i = index">
+        <div *ngIf="item.img != ''" [style.backgroundImage]="'url('+item.img+')'" class="backImage">
+          <div class="removeIcon">
+            <ion-icon slot="start" color="primary" name="close"></ion-icon>
+          </div>
+        </div>
+        <div *ngIf="item.img === ''" [style.backgroundImage]="'url('+item.img+')'" class="backImage2">
+          <div class="addIcon">
+            <ion-icon slot="start" color="light" name="add"></ion-icon>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-button (click)="addMedia()" expand="block" class="addMedia">
+      Add Media
+    </ion-button>
+  </div>
+  <ion-item lines="none">
+    <ion-label color="primary">Smart Photos</ion-label>
+    <ion-toggle slot="end"></ion-toggle>
+  </ion-item>
+  <p class="desc">Smart Photos continuosly tests all your profile photos to find the best one.</p>
+  <p class="desc"><b>About Rahul</b></p>
+  <ion-item lines="none">
+    <ion-textarea placeholder="About you"></ion-textarea>
+  </ion-item>
+  <p class="desc"><b>Job title</b></p>
+  <ion-item lines="none">
+    <ion-input type="text" placeholder="Add job title"></ion-input>
+  </ion-item>
+  <p class="desc"><b>Company</b></p>
+  <ion-item lines="none">
+    <ion-input type="text" placeholder="Add company"></ion-input>
+  </ion-item>
+  <p class="desc"><b>School</b></p>
+  <ion-item lines="none">
+    <ion-input type="text" placeholder="Add School"></ion-input>
+  </ion-item>
+  <p class="desc"><b>Living in</b></p>
+  <ion-item lines="none">
+    <ion-input type="text" placeholder="Add city"></ion-input>
+  </ion-item>
+  <p class="desc"><b>Show my Instagram Photos</b></p>
+  <ion-item lines="none">
+    <ion-label color="primary">Connect Instagram</ion-label>
+  </ion-item>
+  <p class="desc"><b>My Anthem</b></p>
+  <ion-item lines="none">
+    <ion-label>Choose an anthem</ion-label>
+  </ion-item>
+  <p class="desc">Control how you share your Spotify anthem on feed in <span style="color: lightblue;">Settings.</span>
+  </p>
+  <p class="desc"><b>My Top Spotify Artists</b></p>
+  <ion-item lines="none">
+    <ion-label color="primary" class="ion-text-center">Add Spotify to Your Profile</ion-label>
+  </ion-item>
+  <p class="desc">Control how you share your Spotify artists on feed in <span style="color: lightblue;">Settings.</span>
+  </p>
+  <p class="desc"><b>I am</b></p>
+  <ion-item lines="none" (click)="openGender()">
+    <ion-label>Man</ion-label>
+  </ion-item>
+  <p class="desc"><b>Sexual orientation</b></p>
+  <ion-item lines="none" (click)="openOrientation()">
+    <ion-label>Add sexual orientation </ion-label>
+  </ion-item>
+  <p class="desc">Control Your Profile</p>
+  <ion-item lines="none">
+    <ion-label>Don't Show My Age</ion-label>
+    <ion-toggle slot="end"></ion-toggle>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label>Make My Distance Invisiblw</ion-label>
+    <ion-toggle slot="end"></ion-toggle>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" mode="md">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Payment method</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item lines="none">
+    <ion-label position="floating">Card number</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label position="floating">Cardholder name</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-row>
+    <ion-col size="6">
+      <ion-item lines="none">
+        <ion-label position="floating">MM/YY</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col size="6">
+      <ion-item lines="none">
+        <ion-label position="floating">CVC</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-item lines="none">
+    <ion-label position="floating">Postcode</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label position="floating">Email address</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <div class="billingInfo">
+    <div class="flexItem">
+      <p>Tinder Gold 6 months :</p>
+      <p>$22</p>
+    </div>
+    <div class="flexItem">
+      <p>Tax</p>
+      <p>$5</p>
+    </div>
+    <div class="flexItem">
+      <p>Total</p>
+      <p>$27</p>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <p class="warning">
+    By tapping 'Continue', your payment will be charged to your Google Play account. and your
+    subscription will
+    automatically renew for the same package length at the same price until you cancel in settings in the google play
+    store, by tapping 'contiue'. you agree to our terms
+  </p>
+  <ion-button (click)="buynow()" expand="block" shape="round">
+    Buy Now
+  </ion-button>
+  <p class="buyGoogle">Buy with Google Play instead</p>
+</ion-footer>

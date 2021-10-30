@@ -1,0 +1,21 @@
+.mainDiv{
+     h2{
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bold;
+    }
+    .otp{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .resend{
+        color: var(--ion-color-primary);
+        text-align: center;
+    }
+    .btn{
+        margin-top: 20px;
+    }
+}

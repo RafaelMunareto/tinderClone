@@ -1,0 +1,218 @@
+ .navbar{
+        ion-row{
+            width: 100%;
+        }
+        ion-col{
+            text-align: center;
+        }
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        padding: 10px;
+        .title{
+            font-weight: bold;
+            font-size: 1rem;
+            color: black;
+        }
+        .blurTitle{
+            font-weight: bold;
+            font-size: 1rem;
+            color: gray;
+        }
+        .dashedLine{
+            height: 20px;
+            width: 2px;
+            background: lightgray;
+        }
+}
+.messageSections{
+    padding: 10px;
+
+    .newMatchs{
+        font-size: 1.3rem;
+        color: var(--ion-color-primary);
+        font-weight: bold;
+    }
+
+    .pick-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        opacity: 0.3;
+        padding: 2px !important;
+    }
+
+    .pick-avatar-selected {
+        transition: opacity 0.5s linear;
+        opacity: 1 !important;
+    }
+    .myProfile{
+        position: absolute;
+        margin-left: -20px;
+        bottom: 30px;
+        font-size: 30px;
+        font-weight: bold;
+        background: skyblue;
+        border-radius: 50%;
+    }
+    .name{
+        margin: 0px !important;
+        transition: opacity 0.5s linear;
+        opacity: 1 !important;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        max-width: 80px !important; 
+        font-size: .8rem;
+    }
+     .list_div{
+        display: flex;
+        flex-direction: row;
+        padding: 10px 20px;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        border-bottom: 1px solid lightgray;
+
+        .user_image{
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .content_div{
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+
+            .username{
+                // font-family: 'semi-bold';
+            }
+            .msg{
+                font-size: 12px;
+            }
+        }
+        .time_lbl{
+            font-size: 10px;
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+            // font-family: 'semi-bold';
+        }
+    }
+}
+
+.feedSections{
+        .card_div{
+        background : white;
+        margin-bottom: 15px;
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+
+        .flex_div{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            padding: 15px;
+            position: relative;
+            .back_image{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .user_div{
+                padding-left: 10px;
+                ion-label{
+                    display: block;
+                }
+                .username{
+                    font-weight: 600;
+                }
+                .location{
+                    color: gray;
+                    font-size: 14px;
+                }
+            }
+            .moreIcon{
+                position:absolute;
+                right: 20px;
+            }
+            
+        }
+
+        .content_div{
+            padding-top: 0px;
+            font-size: 14px;
+            border-bottom: 1px solid lightgray;
+            position: relative;
+            .back_img{
+                height: 200px;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .moreBtn{
+                display: flex;
+                position: absolute;
+                right: 0;
+                flex-direction: row;
+                bottom: -15px;
+                .bgLike{
+                    // background: var(--ion-color-success);
+                    // border-radius: 50%;
+                    height: 50px;
+                    width: 50px;
+                    // text-align: center;
+                    margin-right: 5px;
+                    ion-fab-button{
+                        height: 50px !important;
+                        width: 50px !important;
+                    }
+                    .iconImg{
+                        height: 50px;
+                        width: 50px;
+                        padding: 10px;
+                    }
+                }
+                 .bgChat{
+                    background: var(--ion-color-secondary);
+                    border-radius: 50%;
+                    height: 50px;
+                    width: 50px;
+                    text-align: center;
+                    margin-right: 5px;
+                    .iconImg{
+                        height: 50px;
+                        width: 50px;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+        .bottom_div{
+            padding: 15px;
+            display: flex;
+            align-self: center;
+            flex-direction: column;
+            position: relative;
+
+            ion-label{
+                font-size: 15px;
+            }
+
+            ion-icon{
+                color: gray;
+                font-size: 15px;
+            }
+            .time{
+                font-size: 14px;
+                color: gray;
+            }
+        }
+    }
+}

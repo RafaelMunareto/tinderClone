@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="navigations">
+      <img src="assets/userActive.png" alt="" class="btnIcon">
+      <img src="assets/tinderDeactive.png" alt="" class="btnIcon2" (click)="backToHome()">
+      <img src="assets/chatDeactive.png" alt="" class="btnIcon" (click)="messgeList()">
+    </div>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="curve">
+    <img src="assets/images/9.png" alt="" class="userAvtar">
+    <ion-label class="username">Rahul Jograna , 22</ion-label>
+    <ion-label class="subTitle">Gujarat Technological University</ion-label>
+    <div class="navigationParams">
+      <div class="commanBlock" (click)="settings()">
+        <div class="bg">
+          <img src="assets/settings.png" alt="" class="imgs">
+        </div>
+        <ion-label class="settingLbl">SETTINGS</ion-label>
+      </div>
+      <div class="advanced" (click)="addMedia()">
+        <div class="bg">
+          <img src="assets/photo.png" alt="" class="imgs">
+          <ion-icon class="iconPlus" color="danger" slot="start" name="add"></ion-icon>
+        </div>
+        <ion-label class="settingLbl">ADD MEDIA</ion-label>
+      </div>
+      <div class="commanBlock" (click)="editProfile()">
+        <div class="bg">
+          <img src="assets/pencil.png" alt="" class="imgs">
+        </div>
+        <ion-label class="settingLbl">EDIT INFO</ion-label>
+      </div>
+    </div>
+  </div>
+  <div>
+    <ion-slides pager [options]="slideOpts">
+
+      <ion-slide *ngFor="let item of sliders;">
+        <div>
+          <ion-label class="title"><img [src]="item.img" alt="" class="iconImg"> {{item.title}}</ion-label>
+          <ion-label class="subTitle">{{item.subTitle}}</ion-label>
+        </div>
+      </ion-slide>
+
+    </ion-slides>
+  </div>
+  <div class="btnBtm">
+    <ion-button (click)="tinerPlus()" expand="block" fill="outline" shape="round">
+      MY TINDER PLUS
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" mode="md">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="cardBlock" (click)="openPurchase()">
+    <p class="title"><img src="assets/tinder_gold.png" alt="" class="logo"> tinder</p>
+    <p class="subTitle">Unlock our most exclusive features</p>
+  </div>
+  <div class="cardBlock" (click)="openPurchase()">
+    <p class="title"><img src="assets/tinderActive.png" alt="" class="logo"> tinder</p>
+    <p class="subTitle">Unlimited Likes & more!</p>
+  </div>
+  <div class="boxes">
+    <div class="cardBlock1" (click)="openPurchase()">
+      <div class="bg">
+        <img src="assets/boost.png" alt="" class="logo">
+      </div>
+      <p class="title">Get Boosts</p>
+    </div>
+    <div class="cardBlock2" (click)="openPurchase()">
+      <div class="bg">
+        <img src="assets/superlike.png" alt="" class="logo">
+      </div>
+      <p class="title">Get Super Likes</p>
+    </div>
+  </div>
+  <p class="desc">Account Settings</p>
+  <ion-item lines="none">
+    <ion-label slot="start">Phone Number</ion-label>
+    <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+  </ion-item>
+  <p class="small">Verify a phone number to help secure your account</p>
+
+  <p class="desc">Discovery Settings</p>
+  <ion-item lines="none">
+    <ion-label slot="start">Location</ion-label>
+    <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+  </ion-item>
+  <p class="small">Change your location to see Tinder members in other cities</p>
+  <ion-item lines="none">
+    <ion-label class="mainTitle">Show Me</ion-label>
+    <ion-label slot="end" class="ion-text-end">Women</ion-label>
+  </ion-item>
+  <ion-card>
+    <ion-label class="mainTitle">Maximum distance</ion-label>
+    <ion-label slot="end">80mi,</ion-label>
+    <ion-range min="0" max="100" pin="true" step="3" ticks="true" value="10" color="primary">
+    </ion-range>
+  </ion-card>
+  <ion-card>
+    <ion-label class="mainTitle">Age range</ion-label>
+    <ion-label slot="end">19-31</ion-label>
+    <ion-range min="0" dualKnobs="true" min='10' max="100" pin="true" step="3" ticks="true" value="10" color="primary">
+    </ion-range>
+  </ion-card>
+  <p class="small">Tinder uses these preferences to suggest matches Some match suggestions may not fall within your
+    desired parameters.</p>
+  <ion-item lines="none">
+    <ion-label>Show me on Tinder</ion-label>
+    <ion-toggle slot="end"></ion-toggle>
+  </ion-item>
+  <p class="small">Sharing your social content will greatly increase your chances of receiving messages!</p>
+  <ion-item lines="none">
+    <ion-label>Recommended sort</ion-label>
+    <ion-toggle slot="end"></ion-toggle>
+  </ion-item>
+  <p class="small">Turning this off will exclude your profile when your matches sort by recommended</p>
+  <ion-item lines="none" (click)="logout()">
+    <ion-label class="ion-text-center">Logout</ion-label>
+  </ion-item>
+  <div class="lastBtn">
+    <img src="assets/tinderActive.png" alt="" class="imgLogo">
+    <p class="version">Version 12.223.33(stable)</p>
+  </div>
+  <ion-item lines="none">
+    <ion-label class="ion-text-center" color="primary">Delete Account</ion-label>
+  </ion-item>
+</ion-content>

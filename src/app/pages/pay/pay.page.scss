@@ -1,0 +1,57 @@
+ion-item{
+    border-bottom: 1px solid lightgray;
+}
+.billingInfo{
+    background: lightgray;
+    margin-top: 10px;
+    border-radius: 10px;
+    .flexItem{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 10px;
+        p{
+            color: #f4f5f8;
+        }
+    }
+}
+.warning{
+    margin: 0px;
+    padding: 0px 10px;
+    color: gray;
+    font-size: 0.5rem;
+    margin-bottom: 10px;
+}
+ion-footer{
+    ion-button {
+        --background: #ffd738;
+        --background-activated: #ffd738;
+        --background-activated-opacity: 1;
+        --background-focused: #ffd738;
+        --background-focused-opacity: 1;
+        --background-hover: #ffd738;
+        --background-hover-opacity: 1;
+        --border-color: #ffd738;
+        --border-radius: 8px;
+        --border-style: solid;
+        --border-width: 8px;
+        --box-shadow: 10px 10px;
+        --color: #ffffff;
+        --color-activated: #ffffff;
+        --color-focused: #ffffff;
+        --color-hover: #ffffff;
+        --opacity: 1;
+        --padding-bottom: 4px;
+        --padding-end: 4px;
+        --padding-start: 4px;
+        --padding-top: 4px;
+        --ripple-color: #1e1e1e;
+        --transition: background-color 15ms linear;
+    }
+}
+.buyGoogle{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffd738;
+}

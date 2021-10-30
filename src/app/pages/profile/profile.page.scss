@@ -1,0 +1,114 @@
+ion-content {
+    --background: #f4f5f8;
+}
+ion-label{
+    display: block;
+}
+ion-slides{
+    height: 120px;
+}
+.curve{
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    height: 60vh;
+    border-radius: 0 0 50% 50% / 50px;
+    text-align: center;
+    .userAvtar{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin-top: 20px;
+    }
+    .username{
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: black;
+        padding: 15px;
+    }
+    .subTitle{
+        font-size: 1rem;
+        color: gray;
+    }
+    .navigationParams{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 20px;
+        .commanBlock{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .bg{
+                background-color: lightgray;
+                border-radius: 50%;
+                width: max-content;
+                height: 50px;
+                .imgs{
+                    height: 50px;
+                    width: 50px;
+                    padding: 15px;
+                }
+            }
+            .settingLbl{
+                font-size: .8rem;
+                font-weight: bold;
+                color: gray;
+                padding-top: 10px;
+            }
+        }
+        .advanced{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 80px;
+            .bg{
+                background: linear-gradient(var(--ion-color-primary), var(--ion-color-danger));
+                border-radius: 50%;
+                width: max-content;
+                height: 50px;
+                position: relative;
+                .imgs{
+                    height: 50px;
+                    width: 50px;
+                    padding: 15px;
+                }
+                .iconPlus{
+                    position: absolute;
+                    top: 35px;
+                    right: 0px;
+                    background: white;
+                    border-radius: 50%;
+                    box-shadow: 1px 1px 20px 2px grey;
+                }
+            }
+            .settingLbl{
+                font-size: .8rem;
+                font-weight: bold;
+                color: gray;
+                padding-top: 10px;
+            }   
+        }
+    }
+}
+.title{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black;
+}
+.iconImg{
+    height: 20px;
+    width: 20px;
+}
+.subTitle{
+    font-size: 1rem;
+    color: gray;
+}
+.btnBtm{
+    position: absolute;
+    bottom: 20px;
+    transform: translate(-50%,-50%);
+    left: 50%;
+
+}

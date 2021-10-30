@@ -1,0 +1,94 @@
+
+.mainContent{
+  position: relative;
+  ion-slides{
+      --bullet-background-active : white;
+      --bullet-background : gray;   
+  }
+  .imgBg{
+      height: 500px;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+ 
+  .bgView{
+      height: 50px;
+      width: 50px;
+      background: var(--ion-color-primary);
+      position: absolute;
+      right: 5px;
+      top: 470px;
+      z-index: 999;
+      border-radius: 50%;
+    
+      .bgDown{
+          padding: 10px;
+      }
+  }
+  .info{
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+    ion-label {
+      --color: gray;
+      display: block;
+    }
+     .imgBgInsta{
+      height: 100px;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  .swiper-pagination-bullet{
+      border: 1px solid;
+  }
+  ::ng-deep .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+      top: 0px !important;
+  }
+  ::ng-deep .swiper-pagination-bullet{
+      top: 0px !important;
+      
+      width: 10% !important;
+      height: 10px !important;   
+      border-radius: 0 !important;
+  }
+  .tinderButtons {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+  }
+  .btnBg{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    padding: 10px;
+    background: white;
+    text-align: center;
+    box-shadow: 1px 0px 20px 0px grey;
+    .btnImage{
+      width: 25px;
+    }
+  }
+  .btnBgMain{
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    border: 0;
+    padding: 10px;
+    background: white;
+    text-align: center;
+    box-shadow: 1px 0px 20px 0px grey;
+    .btnImage{
+      width: 25px;
+      margin-top: 5px;
+    }
+  }
+}

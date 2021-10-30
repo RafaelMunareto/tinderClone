@@ -1,0 +1,234 @@
+ion-label {
+  display: block !important;
+}
+.tinder {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  // background-color: rgba(0,0,0,0.4);
+  background:rgba(205, 205, 205, 0.4);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.tinderStatus {
+  position: absolute;
+  top: 10%;
+  margin-top: -30px;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+  .nope{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    float: right;
+    margin-right: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    transform: rotate(45deg);
+    border: 2px solid var(--ion-color-danger);
+    width: max-content;
+    color: var(--ion-color-danger);
+  }
+  .liked{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    float: left;
+    margin-left: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    transform: rotate(-45deg);
+    border: 2px solid var(--ion-color-success);
+    width: max-content;
+    color: var(--ion-color-success);
+  }
+  .superLiked{
+     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    float: left;
+    margin-left: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    
+    border: 2px solid rgb(0, 255, 229);
+    width: max-content;
+    color: rgb(0, 255, 229);
+    animation: fadeInUp 1s;
+  }
+}
+
+.tinderCards {
+  text-align: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tinderCard {
+  display: inline-block;
+  width: 100%;
+  height: 75%;
+  border-radius: 8px;
+  overflow: hidden;
+  position: absolute;
+  will-change: transform;
+  transition: all 0.3s ease-in-out;
+  margin-top: 10px;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+.userImage{
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+    width: 100%;
+    [userInfo] {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0px;
+      min-height: max-content;
+      border-bottom: 1px solid transparent !important;
+      overflow: hidden;
+      background-image: linear-gradient(-230deg, #17181a63, #827777);
+      text-align: left;
+      .name{
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding: 5px;
+        ion-icon {
+          color: #ffffff;
+          margin-left: 15px;
+        }
+      }
+      .subTitle{
+         color: white;
+         padding: 5px;
+        font-size: 1.2rem;
+      }
+  }
+}
+
+.moving.tinderCard {
+  transition: none;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+.tinderStatus > div {
+  transition: all 0.3s ease-in-out;
+}
+
+.tinderStatus svg {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  width: 100px;
+  margin-left: -50px;
+}
+
+.tinderCard img {
+  max-width: 100%;
+  max-height: 75%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tinderCard h3 {
+  margin-top: 16px;
+  font-size: 24px;
+  padding: 0 16px;
+  pointer-events: none;
+}
+
+.tinderCard p {
+  margin-top: 24px;
+  font-size: 16px;
+  padding: 0 16px;
+  pointer-events: none;
+}
+
+.tinderButtons {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+.btnBg{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  padding: 10px;
+  background: white;
+  text-align: center;
+  .btnImage{
+    width: 25px;
+  }
+}
+.btnBgMain{
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  border: 0;
+  padding: 10px;
+  background: white;
+  text-align: center;
+  .btnImage{
+    width: 25px;
+    margin-top: 5px;
+  }
+}
+
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}

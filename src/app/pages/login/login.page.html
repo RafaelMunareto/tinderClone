@@ -1,0 +1,20 @@
+<ion-content>
+  <div class="mainDiv">
+    <img src="assets/logoApp.png" alt="" class="logo">
+    <p class="terms">By tapping 'Log In', you agree with <br>
+      our <span style=" text-decoration: underline;">Terms</span>Learn how we process <br>
+      your data in our <span style=" text-decoration: underline;"> Privacy Policy</span> and <br>
+      <span style=" text-decoration: underline;">Cookies Policy.</span></p>
+    <div class="fb">
+      <ion-button (click)="fb()" expand="block" shape="round">
+        LOG IN WITH FACEBOOK
+      </ion-button>
+    </div>
+    <div class="phone">
+      <ion-button (click)="phone()" expand="block" fill="clear" shape="round">
+        LOG IN WITH PHONE NUMBER
+      </ion-button>
+    </div>
+    <p class="troub" (click)="trub()"> Trouble loggin in?</p>
+  </div>
+</ion-content>

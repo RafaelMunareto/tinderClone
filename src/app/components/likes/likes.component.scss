@@ -1,0 +1,123 @@
+ion-label{
+    display: block;
+}
+.mainMenu{
+    
+    .navigations{
+        ion-row{
+            width: 100%;
+        }
+        ion-col{
+            text-align: center;
+        }
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        .title{
+            font-weight: bold;
+            font-size: 1rem;
+            color: black;
+        }
+        .blurTitle{
+            font-weight: bold;
+            font-size: 1rem;
+            color: gray;
+        }
+        .dashedLine{
+            height: 20px;
+            width: 2px;
+            background: lightgray;
+        }
+    }
+    .likeSections{
+        text-align: center;
+        padding: 10px 0px;
+        .title{
+            font-size: 1.3rem;
+            color: black;
+        }
+        .userPic{
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 200px;
+            background-size: cover;
+            width: 100%;
+            border-radius: 10px;
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+        }
+        .seeLikes{
+            position: fixed;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            bottom: 35px;
+            min-width: 100%;
+        }
+    }
+    .pickSections{
+        text-align: center;
+        padding: 10px 0px;
+        .title{
+            font-size: 1.3rem;
+            color: black;
+        }
+        .userPic{
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 200px;
+            background-size: cover;
+            width: 100%;
+            border-radius: 10px;
+            .info{
+                position: absolute;
+                bottom: 0px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                height: max-content;
+                width: 95%;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                overflow: hidden;
+                .infoSections{
+                    color: white;
+                    font-weight: bold;
+                    text-align: left;
+                    font-size: .8rem;
+                    padding-bottom: 10px;
+                }
+
+                .iconSection{
+                    background: white;
+                    border-radius: 50%;
+                    height: 25px;
+                    width: 25px;
+                    padding-bottom: 10px;
+                    .btnImage{
+                        padding:5px;
+                        height: 25px;
+                        width: 25px;
+                    }
+                }
+            }
+        }
+        .userPicBlur{
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 200px;
+            background-size: cover;
+            width: 100%;
+            border-radius: 10px;
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+        }
+        .seeLikes{
+            position: fixed;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            bottom: 35px;
+            min-width: 100%;
+        }
+    }
+}

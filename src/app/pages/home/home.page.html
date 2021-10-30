@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="navigations">
+      <img src="assets/user.png" alt="" class="btnIcon" (click)="profile()">
+      <div class="switch">
+        <div (click)="changeView('cards')" [className]="activeMenu == 'cards' ? 'leftCol':'leftColDeactive'">
+          <img [src]="activeMenu == 'cards' ? 'assets/tinderActive.png' :'assets/tinderDeactive.png' " alt=""
+            class="btnIcon2">
+        </div>
+        <div (click)="changeView('likes')" [className]="activeMenu == 'likes' ? 'rightColActive':'rightCol'">
+          <img [src]="activeMenu == 'likes' ?'assets/shineActive.png': 'assets/shineDeactive.png'" alt=""
+            class="btnIcon2">
+        </div>
+      </div>
+      <img src="assets/chatDeactive.png" alt="" class="btnIcon" (click)="openChat()">
+    </div>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <app-tinder-ui *ngIf="activeMenu =='cards'" [cards]="cards"></app-tinder-ui>
+  <app-likes *ngIf="activeMenu =='likes'"></app-likes>
+</ion-content>

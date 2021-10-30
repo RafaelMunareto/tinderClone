@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="navigations">
+      <img src="assets/user.png" alt="" class="btnIcon" (click)="userProfile()">
+      <img src="assets/tinderDeactive.png" alt="" class="btnIcon2" (click)="backToHome()">
+      <img src="assets/chatActive.png" alt="" class="btnIcon">
+    </div>
+    <div class="navbar">
+      <ion-row>
+        <ion-col size="6" style="border-right: 1px solid lightgray;">
+          <ion-label (click)="changeView('msg')" class="title">Messages
+          </ion-label>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label (click)="changeView('feeds')" class="title">Feed
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-toolbar>
+
+</ion-header>
+<ion-content>
+
+  <div class="messageSections" *ngIf="activeMenu == 'msg'">
+    <ion-label class="newMatchs">New Matches</ion-label>
+    <ion-row>
+      <ion-col>
+        <ion-slides [options]="avatarSlide">
+          <ion-slide *ngFor="let avatar of myMatch;let i = index;">
+            <div>
+              <img class="pick-avatar pick-avatar-selected" [src]="avatar.img" (click)="selectedUser(avatar)" />
+              <p class="name">{{avatar.name}}</p>
+            </div>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+    <ion-label class="newMatchs">Messages</ion-label>
+    <div class="list_div" *ngFor="let item of myMatch;let i = index">
+      <div class="user_image" [style.backgroundImage]="'url('+item.img+')'"></div>
+      <div class="content_div" (click)="selectedUser(item)">
+        <ion-label class="username">{{item.name}}</ion-label>
+        <ion-label class="msg">{{item.description}}</ion-label>
+      </div>
+      <ion-label class="time_lbl">{{i}}: 00 pm</ion-label>
+    </div>
+  </div>
+  <div class="feedSections" *ngIf="activeMenu =='feeds'">
+    <div class="card_div" *ngFor="let item of myMatch; let i = index">
+
+      <div class="flex_div">
+        <div class="back_image" [style.backgroundImage]="'url('+item.img+')'"></div>
+        <div class="user_div">
+          <ion-label class="username">{{item.name}}</ion-label>
+          <ion-label class="location">{{item.description}}</ion-label>
+        </div>
+        <ion-icon class="moreIcon" (click)="presentPopover()" name="ellipsis-horizontal-outline"></ion-icon>
+
+      </div>
+
+      <div class="content_div">
+        <div class="back_img" [style.backgroundImage]="'url('+item.img+')'"></div>
+        <div class="moreBtn">
+          <div class="bgLike">
+            <ion-fab>
+              <ion-fab-button color="success">
+                <img src="assets/whiteheart.png" alt="" class="iconImg">
+              </ion-fab-button>
+              <ion-fab-list side="start">
+                <ion-fab-button>
+                  <ion-icon name="heart" color="danger"></ion-icon>
+                </ion-fab-button>
+                <ion-fab-button>
+                  <ion-icon name="hand-left" color="secondary"></ion-icon>
+                </ion-fab-button>
+                <ion-fab-button>
+                  <ion-icon name="happy" color="warning"></ion-icon>
+                </ion-fab-button>
+              </ion-fab-list>
+            </ion-fab>
+
+          </div>
+          <div class="bgChat" (click)="selectedUser(item)">
+            <img src="assets/whitecomment.png" alt="" class="iconImg">
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom_div">
+        <ion-label>
+          <ion-icon name="school-outline"></ion-icon>
+          Gujarat technological university
+        </ion-label>
+        <ion-label>
+          <ion-icon name="location-outline"></ion-icon>
+          3 miles away
+        </ion-label>
+        <span class="time">4 days ago</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>

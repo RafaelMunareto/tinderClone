@@ -1,0 +1,20 @@
+<ion-content>
+  <div class="fullAvtar" [style.backgroundImage]="'url('+avtar+')'">
+    <div class="mainDiv">
+
+
+      <ion-label class="its">IT'S A
+      </ion-label>
+      <ion-label class="match">MATCH!</ion-label>
+      <img src="assets/like.png" alt="" class="likedImg">
+      <ion-label class="name">{{name}} likes you too!</ion-label>
+      <div class="textInput">
+        <ion-input type="text" placeholder="Say something nice"></ion-input>
+        <ion-button (click)="send()" expand="block" fill="clear" color="secondary">
+          SEND
+        </ion-button>
+      </div>
+      <ion-label (click)="dismiss()" class="continueSwipe">KEEP SWIPING</ion-label>
+    </div>
+  </div>
+</ion-content>

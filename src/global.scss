@@ -1,0 +1,174 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+.custom-loader {
+	--background: transparent;
+	ion-backdrop {
+		background-color: #fff;
+		opacity: .9 !important;
+	}
+	.loading-wrapper {
+		// -webkit-animation: ld-vortex-out 2s ease-out infinite;
+		// animation: ld-vortex-out 2s ease-out infinite;
+		// animation-timing-function: cubic-bezier(0.05, 0, 3, 0.05);
+
+		background-image:  url("/assets/logo.png");
+		background-size: contain;
+		background-position: center center;
+		background-repeat: no-repeat;
+		min-width: 90px;
+		min-height: 90px;
+		border-radius: 50%;
+		border-color: var(--ion-color-primary);;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		-webkit-transition: all .3s ease;
+		-o-transition: all .3s ease;
+		transition: all .3s ease;
+		
+		-webkit-animation: pulse 1.6s infinite;
+		animation: pulse 1.6s infinite;
+	}
+}
+
+.navigations{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0px;
+    align-items: center;
+    .btnIcon{
+        height: 25px;
+        width: 25px;
+    }
+    .btnIcon2{
+       height: 25px;
+        width: 25px; 
+    }
+   .switch{
+       display: flex;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        box-shadow: 1px 1px 20px 1px #c2c1c1;
+        width: 100px;
+        text-align: center;
+   }
+   .leftCol{
+    background: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 5px;
+    width: 50px;
+   }
+   .leftColDeactive{
+    background: #d3d3d387;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 5px;
+    width: 50px;
+   }
+   .rightCol{
+    background: #d3d3d387;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px;
+    width: 50px;
+   }
+   .rightColActive{
+     background: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;   
+    padding: 5px;
+    width: 50px;
+   }
+}
+
+ion-toolbar{
+  ion-title {
+    text-align: start;
+  }
+}
+ion-modal.modalContact {
+    .modal-wrapper{
+        width: 95% !important;
+        border-radius: 10px !important;
+    }
+    &.bottom {
+        align-items: flex-end;
+    }
+    --height: auto;
+    .ion-page {
+        position: relative;
+        display: block;
+        contain: content;
+        border-radius: 10px;
+        .inner-content {
+            max-height: 80vh;
+            overflow: auto;
+            // padding: 10px;
+        }
+    }
+}
+
+@-webkit-keyframes pulse {
+  
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(215, 17, 73, .85);
+    box-shadow: 0 0 0 0 rgba(215, 17, 73, .85);
+  }
+  
+  70% {
+    -webkit-box-shadow: 0 0 0 2em rgba(215, 17, 73, 0);
+    box-shadow: 0 0 0 2em rgba(215, 17, 73, 0);
+  }
+  
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(215, 17, 73, 0);
+    box-shadow: 0 0 0 0 rgba(215, 17, 73, 0);
+  }
+  
+}
+
+@keyframes pulse {
+  
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(215, 17, 73, .85);
+    box-shadow: 0 0 0 0 rgba(215, 17, 73, .85);
+  }
+  
+  70% {
+    -webkit-box-shadow: 0 0 0 2em rgba(215, 17, 73, 0);
+    box-shadow: 0 0 0 2em rgba(215, 17, 73, 0);
+  }
+  
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(215, 17, 73, 0);
+    box-shadow: 0 0 0 0 rgba(215, 17, 73, 0);
+  }
+  
+}
